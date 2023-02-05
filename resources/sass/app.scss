@@ -1,0 +1,52 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+.main-background{
+    background-image: url('../image/vegetables-set-left-black-slate.jpg');
+    background-repeat: no-repeat;
+    background-image: fixed ;
+   background-attachment: fixed;
+    background-size: cover;  
+}
+
+
+.inputs-form{
+
+background-color: rgb(90,87,94) ;
+border: 2px solid white;
+border-radius: 0.8rem;
+color: aliceblue;
+font-size: larger;
+&:focus{
+background-color: rgb(90,87,94) ;
+}
+// width: auto;
+}
+.label-name{
+    font-size: larger;
+    margin: 0.4rem 0;
+    color: aliceblue;
+}
+
+.form{
+
+    // background: rgb(0,0,0)!important ;
+    // background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(186,186,186,1) 100%)!important ;
+    //     border-radius: 16px;
+    border: 1px solid #fff1f2;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 5px 0 #373535;
+    backdrop-filter: blur(1px);
+
+    // /* border-radius: 20px;
+}
+
+
