@@ -40,6 +40,7 @@ background-color: rgb(90,87,94) ;
     // background: rgb(0,0,0)!important ;
     // background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(186,186,186,1) 100%)!important ;
     //     border-radius: 16px;
+
     border: 1px solid #fff1f2;
     border-radius: 20px;
     padding: 40px;
@@ -47,6 +48,29 @@ background-color: rgb(90,87,94) ;
     backdrop-filter: blur(1px);
 
     // /* border-radius: 20px;
+}
+.button-create{
+    font-size: larger;
+    color: aliceblue;
+    border: 0.2rem solid aliceblue ;
+    background-color: rgb(90,87,94) ;
+    border-radius: 0.6rem ;
+
+    &:hover{
+    
+        background-color: #989393;
+
+   
+
+    }
+}
+.card-edit-profile{
+    width: 70%;
+    border: 1px solid #fff1f2;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 5px 0 #373535;
+    backdrop-filter: blur(1px);
 }
 
 

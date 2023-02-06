@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -21,5 +22,37 @@ class ProfileController extends Controller
         ]);
 
         return redirect()->back();
+        
     }
+
+public function updatePassword(User $user ,Request $request)
+{
+        # Validation
+        $request->validate([
+            'old_password' => 'required',
+            'password' => 'required|confirmed',
+        ]);
+
+        // dd($request->new_password);
+        // return $user->password; 
+        
+        
+      
+         
+
+        //  #Match The Old Password
+         if(!Hash::check($request->old_password, $user->password)){
+            return redirect()->back()->with("error", "Old Password Doesn't match!");
+        }
+
+
+        // #Update the new Password
+        User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->password)
+        ]);
+
+        return back()->with("status", "Password changed successfully!");
 }
+}
+    
+
