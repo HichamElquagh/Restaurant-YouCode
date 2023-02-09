@@ -16,12 +16,13 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body class="main-background">
+
+<body class="dash-background">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light  shadow-sm">
             <div class="container">
-                <a class="navbar-brand fs-2 text-light" href="{{ url('/') }}">
-                    {{('Restaurant')}}
+                <a class="navbar-brand fs-2 text-dark" href="{{ url('/') }}">
+                    {{ ('Restaurant') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -50,19 +51,19 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link text-light fs-4 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link text-dark fs-4 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout')}}"
+                                    <a class=" text-dark dropdown-item" href="{{ route('logout')}}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <!-- slashh  -->
                                     
-                                    <a class="dropdown-item" href="{{ route('profile')}}">
+                                    <a class="dropdown-item text-dark" href="{{ route('profile')}}">
                                       
                                         {{ __('Profile') }}
                                     </a>
@@ -78,7 +79,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class=" container py-4">
             @yield('content')
         </main>
     </div>

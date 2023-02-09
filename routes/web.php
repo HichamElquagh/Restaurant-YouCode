@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MealController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('profile',[ProfileController::class,'index'])->name('profile');
     Route::post('profile/{user}',[ProfileController::class,'update'])->name('profile.update');
     Route::post('profile.update.password/{user}',[ProfileController::class,'updatePassword'])->name('profile.update.password');
-  });
+});
+Route::post('Savemeal',[MealController::class,'save'])->name('Savemeal');
+Route::get('edit/{id}',[MealController::class,'edit'])->name('edit');
+Route::post('Updatemeal/{id}',[MealController::class,'update'])->name('Updatemeal');
+
+  

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Meal;
 
 class HomeController extends Controller
 {
@@ -21,8 +22,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Meal $meal)
     {
-        return view('home');
+        $meals = $meal->all();
+        return view('home', ['meal' => $meals]);
     }
+     
 }
