@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MealController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,21 +17,29 @@ use App\Http\Controllers\MealController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/dash', function () {
+//     return view('home');
+// });
+Route::get('/dash',[HomeController::class,'index'])->name('dash');
+// Route::post('/dash',[HomeController::class,'save'])->name('dash.save');
+// form method="post" action{{ route('dash.save') }}
+
+
+Route::get('/', [MealController::class,'showlanding'])->name('welcome');
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home',[MealController::class,'showlanding'])->name('welcome');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('profile',[ProfileController::class,'index'])->name('profile');
     Route::post('profile/{user}',[ProfileController::class,'update'])->name('profile.update');
     Route::post('profile.update.password/{user}',[ProfileController::class,'updatePassword'])->name('profile.update.password');
 });
-Route::post('Savemeal',[MealController::class,'save'])->name('Savemeal');
+Route::post('Savemeal',[MealController::class,'store'])->name('Savemeal');
 Route::get('edit/{id}',[MealController::class,'edit'])->name('edit');
 Route::post('Updatemeal/{id}',[MealController::class,'update'])->name('Updatemeal');
+Route::get('delete/{id}',[MealController::class,'delete'])->name('delete');
 
   

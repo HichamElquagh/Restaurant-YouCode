@@ -15,11 +15,33 @@
    background-attachment: fixed;
     background-size: cover;  
 }
-.dash-background{
+.app1{
     // background-color: rgb(251, 246, 241);
-    background-color: rgb(243 244 246);
+    background-color: #E9E8E8;
 }
 
+
+.brind{
+    color:#e0dbdb;
+    font-size: xx-large;
+
+   }
+.background-image-landing {
+    background-image: url('../image/rustic-wooden-planks-with-blackboard-background.jpg');
+    background-repeat: no-repeat;
+    // background-image: fixed ;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+.items-nav-landingpage{
+    text-decoration: none;
+    color:#ede8e8;
+    font-size: larger;
+    font-weight: bolder;
+    border: 2px solid #989393 ;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem; 
+}
 
 .inputs-form{
 

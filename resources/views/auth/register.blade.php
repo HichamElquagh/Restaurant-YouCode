@@ -3,7 +3,7 @@
 @section('content')
 <div class=" main-background container">
     <div class="row justify-content-start">
-        <div class="col-md-6">
+        <div class=" col-lg-5 col-md-8">
             <div class="form">
                 <div class="mb-3 text-center fs-3 text-light">{{ __('Register') }}</div>
 
@@ -67,7 +67,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="button-create my-2 py-2 px-4"">
                                     {{ __('Register') }}
                                 </button>
                             </div>

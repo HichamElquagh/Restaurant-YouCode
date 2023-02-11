@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index(Meal $meal)
     {
         $meals = $meal->all();
-        return view('home', ['meal' => $meals]);
+        return view('dashboard', ['meal' => $meals]);
     }
      
 }

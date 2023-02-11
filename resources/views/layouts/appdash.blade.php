@@ -19,9 +19,9 @@
 
 <body class="dash-background">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light  shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light  shadow-lg">
             <div class="container">
-                <a class="navbar-brand fs-2 text-dark" href="{{ url('/') }}">
+                <a class="navbar-brand fs-2 text-dark" href="/">
                     {{ ('Restaurant') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -79,7 +79,7 @@
             </div>
         </nav>
 
-        <main class=" container py-4">
+        <main class="  app1 py-4">
             @yield('content')
         </main>
     </div>

@@ -8,16 +8,19 @@ use  App\Models\Meal;
 class MealController extends Controller
 {
     //
-    public function save(Meal $meals , Request $request ){
+    
+
+    public function store(Meal $meals , Request $request ){
 
      $request->validate(
         [
             'name'=>'required',
-            'image'=>'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image'=>'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:30000',
             'description'=>'required',
             'date'=>'required',
         ] 
      );
+    //  model , controller , route
         $image = $request->file('image');
         // dd($image);
         if (!empty($image)){
@@ -38,7 +41,7 @@ class MealController extends Controller
 
         ]);
          
-    return redirect()->route('home')->with('success','Meal created successfully.');
+    return redirect()->route('dash')->with('success','Meal created successfully.');
     
     
     
@@ -56,7 +59,7 @@ class MealController extends Controller
     $request->validate(
         [
             'name'=>'required',
-            'image'=>'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image'=>'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:11000',
             'description'=>'required',
             'date'=>'required',
         ] 
@@ -89,8 +92,18 @@ class MealController extends Controller
         
         
          
-    return redirect()->route('home')->with('success','Meal created successfully.');
+    return redirect()->route('dash')->with('success','Meal created successfully.');
 
    }
+   public function showlanding(Meal $meal)
+   {
+       $mealss = $meal->get();
+       return view('welcome', ['meal' => $mealss]);
+   }
+   public function delete($id, Meal $meals){
+    $mealss =$meals->find($id);
+    $mealss->delete();
+    return redirect()->route('dash')->with('success','Company has been deleted successfully');
 
+   }
 }

@@ -18,9 +18,9 @@
 </head>
 <body class="main-background">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light  shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand fs-2 text-light" href="{{ url('/') }}">
+                <a class="navbar-brand fs-2 text-light" href="/">
                     {{('Restaurant')}}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
