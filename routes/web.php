@@ -37,7 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('profile/{user}',[ProfileController::class,'update'])->name('profile.update');
     Route::post('profile.update.password/{user}',[ProfileController::class,'updatePassword'])->name('profile.update.password');
 });
-Route::post('Savemeal',[MealController::class,'store'])->name('Savemeal');
+Route::post('storemeal',[MealController::class,'store'])->name('storemeal');
 Route::get('edit/{id}',[MealController::class,'edit'])->name('edit');
 Route::post('Updatemeal/{id}',[MealController::class,'update'])->name('Updatemeal');
 Route::get('delete/{id}',[MealController::class,'delete'])->name('delete');

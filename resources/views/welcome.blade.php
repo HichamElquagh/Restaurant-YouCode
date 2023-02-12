@@ -47,7 +47,7 @@
         <div class=" container row mx-auto  g-4">
             @foreach( $meal as $meals)
             <div class="col-md-4 rounded">
-              <div class="card">
+              <div class="card rounded border border-4">
                 <img src="{{asset('images/'.$meals->image)}}"  height="350" class="card-img-top" alt="...">
                 <div class="card-body text-bg-dark text-center ">
                   <h5 class=" fs-4 card-title">{{$meals->name}}</h5>

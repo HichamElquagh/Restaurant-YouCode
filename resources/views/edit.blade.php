@@ -4,7 +4,7 @@
 <!-- <div class="modal fade" id="modal-meal"> -->
         <!-- <div class="modal-dialog"> -->
             <!-- <div class="modal-content"> -->
-            
+                 <div  class="bg-light container" >
                 <form action="{{route('Updatemeal',$meal->id)}}" method="POST" id="form" enctype="multipart/form-data">
                 @csrf
                     <div class="modal-header">
@@ -33,16 +33,15 @@
 
               <div class="mb-3">
                                 <label class="form-label">Date</label>
-                                <input type="date" name="date" value="{{$meal->date}}" class="form-control rounded" required/>
+                                <input type="date" name="date" value="{{$meal->date}}" class=" form-control rounded" required/>
                             </div>
 </div>
                     <div class="modal-footer">
-                        <a href="/dashboard" class="btn btn-white border" >Cancel</a>
+                        <a href="/dash" class="btn btn-white border mx-3" >Cancel</a>
                         <button type="submit" class="btn btn-primary text-light my-3 bg-primary">Update Meal</button>
                     </div>
                 </form>
                 
             </div>
-        <!-- </div>
-    </div> -->
+        </div>
 @endsection
